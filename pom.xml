@@ -7,5 +7,6 @@
 	<name>functional-programming-exercises</name>
 	<modules>
 		<module>filtering-exercise</module>
+		<module>mapping-exercise</module>
 	</modules>
 </project>
