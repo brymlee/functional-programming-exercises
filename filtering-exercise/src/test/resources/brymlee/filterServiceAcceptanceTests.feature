@@ -14,3 +14,8 @@ Scenario: Can the filtering service filter out people who are close to retiremen
 	Given a person list of "[ {'name' : 'Mike', 'age' : 34}, {'name' : 'Bob', 'age' : 65},  {'name' : 'Sally', 'age' : 88}]"
 	When calling the retirement filter on list
 	Then the person list result should be "[ {'name' : 'Bob', 'age' : 65},  {'name' : 'Sally', 'age' : 88}]"
+
+Scenario: Can the filtering service filter out integers from a list of generic numbers?
+	Given a generic number list of "[1, 0.3, 0.55, 9, 13, 88]"
+	When calling the integer filter on list
+	Then the generic number list result should be "[1, 9, 13, 88]"
