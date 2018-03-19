@@ -8,5 +8,6 @@
 	<modules>
 		<module>filtering-exercise</module>
 		<module>mapping-exercise</module>
+		<module>reducing-exercise</module>
 	</modules>
 </project>

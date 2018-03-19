@@ -11,9 +11,9 @@ Scenario: Can the filtering service filter out odds out of a list?
 	Then the integer list result from the odd integer filter should be "[1, 3]"
 
 Scenario: Can the filtering service filter out people who are close to retirement? 
-	Given a person list of "[ {'name' : 'Mike', 'age' : 34}, {'name' : 'Bob', 'age' : 65},  {'name' : 'Sally', 'age' : 88}]"
+	Given a person list of "[ {"name" : "Mike", "age" : 34}, {"name" : "Bob", "age" : 65},  {"name" : "Sally", "age" : 88}]"
 	When calling the retirement filter on list
-	Then the person list result from the retirement filter should be "[ {'name' : 'Bob', 'age' : 65},  {'name' : 'Sally', 'age' : 88}]"
+	Then the person list result from the retirement filter should be "[ {"name" : "Bob", "age" : 65},  {"name" : "Sally", "age" : 88}]"
 
 Scenario: Can the filtering service filter out integers from a list of generic numbers?
 	Given a generic number list of "[1, 0.3, 0.55, 9, 13, 88]"
