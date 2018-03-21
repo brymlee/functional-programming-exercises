@@ -107,7 +107,7 @@ public class FunctionalExerciseTests {
 	public void sumIntegersUpTo10() {
 		final List<Integer> input = asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10); 
 		final Integer expected = 55;
-		final String actual = ReducingService
+		final Integer actual = ReducingService
 			.sumIntegers(input);
 		assertEquals(expected, actual);
 	}
