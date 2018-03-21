@@ -14,7 +14,7 @@ public class FunctionalExerciseTests {
 		assertEquals("hello", "hello");	
 	}
 
-	/*@Test
+	@Test
 	public void filterOutTheEvens() {
 		final List<Integer> expected = asList(2, 4); 
 		final List<Integer> actual = FilteringService 
@@ -125,6 +125,50 @@ public class FunctionalExerciseTests {
 	}
 
 	@Test
+	public void fibanacciTo0(){
+		final List<Integer> expected = asList();
+		final List<Integer> actual = FibanacciService
+			.apply(0);
+		assertEquals(expected.size(), actual.size());
+	}
+	
+	@Test
+	public void fibanacciTo1(){
+		final List<Integer> expected = asList(0);
+		final List<Integer> actual = FibanacciService
+			.apply(1);
+		assertEquals(expected.size(), actual.size());
+		range(0, expected.size())
+			.forEach(index -> {
+				assertEquals(expected.get(index), actual.get(index));
+			});
+	}
+	
+	@Test
+	public void fibanacciTo2(){
+		final List<Integer> expected = asList(0, 1);
+		final List<Integer> actual = FibanacciService
+			.apply(2);
+		assertEquals(expected.size(), actual.size());
+		range(0, expected.size())
+			.forEach(index -> {
+				assertEquals(expected.get(index), actual.get(index));
+			});
+	}
+	
+	@Test
+	public void fibanacciTo5() {
+		final List<Integer> expected = asList(0, 1, 1, 2, 3);
+		final List<Integer> actual = FibanacciService
+			.apply(5);
+		assertEquals(expected.size(), actual.size());
+		range(0, expected.size())
+			.forEach(index -> {
+				assertEquals(expected.get(index), actual.get(index));
+			});
+	}
+	
+	@Test
 	public void sortNames() {
 		final List<String> input = asList("Zack", "Molly", "Xavier", "John", "Adam");
 		final List<String> expected = asList("Adam", "John", "Molly", "Xavier", "Zack");	
@@ -135,5 +179,5 @@ public class FunctionalExerciseTests {
 			.forEach(index -> {
 				assertEquals(expected.get(index), actual.get(index));
 			});
-	}*/
+	}
 }
