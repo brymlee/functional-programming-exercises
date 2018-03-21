@@ -118,7 +118,20 @@ public class FunctionalExerciseTests {
 		final List<Integer> actual = FibanacciService
 			.apply(10);
 		assertEquals(expected.size(), actual.size());
-		expected
+		range(0, expected.size())
+			.forEach(index -> {
+				assertEquals(expected.get(index), actual.get(index));
+			});
+	}
+
+	@Test
+	public void sortNames() {
+		final List<String> input = asList("Zack", "Molly", "Xavier", "John", "Adam");
+		final List<String> expected = asList("Adam", "John", "Molly", "Xavier", "Zack");	
+		final List<String> actual = SortingService
+			.sortNames(input);
+		assertEquals(expected.size(), actual.size());
+		range(0, expected.size())
 			.forEach(index -> {
 				assertEquals(expected.get(index), actual.get(index));
 			});
