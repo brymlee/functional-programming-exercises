@@ -21,7 +21,7 @@ public class FibanacciService {
 	}
 
 	private static List<Integer> apply(final List<Integer> sequence, final Integer index, final Integer ns) {
-		if(index == ns){
+		if(index.equals(ns)){
 			return sequence;
 		}else{
 			final Integer first = sequence.get(index - 2);
